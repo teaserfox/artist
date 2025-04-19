@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     border: none;
     box-sizing: border-box;
@@ -19,11 +19,6 @@
 
 body {
     background: #c5d4c9;
-    color: black;
-    /*background-color: white;*/
-    /*background: -webkit-linear-gradient(271deg, #ce9586,#e6cac3,#f7edeb);*/
-    /*background: linear-gradient(229deg, #ce9586, #e6cac3, #f7edeb);*/
-    /*background: linear-gradient(194deg, #a53d22, #ae862f, #c3b19e);*/
 }
 
 h1, h2, h3 {
@@ -34,58 +29,112 @@ h1 {
     color: rgb(221 242 227);
 }
 
-.image {
-    align-self: flex-end;
-    width: 300px;
-}
-
 .hero {
-    background: url('../images/main.jpg');
-}
-
-
-.hero {
-    position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
 }
 
 .hero-card {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background: black;
+    position: relative;
+}
+
+.collage-left {
+    background: url("../images/collage_left.jpg") no-repeat center / cover;
+    width: 50%;
+    height: 750px;
+}
+
+.collage-left img {
+
+
+}
+
+.collage-right {
+    background: url("../images/collage_right.jpg") no-repeat center / cover;
+    width: 50%;
+    height: 750px;
+}
+
+.collage-right img {
+    width: 100%;
+}
+
+.image-polina {
+    padding: 15px;
+    align-self: center;
+    max-width: 300px;
+}
+
+.image-polina img {
+    max-width: 100%;
+    border-radius: 7px;
+}
+
+.main-name {
     position: absolute;
-    left: 933px;
-    top: 66px;
-    width: fit-content;
-    max-width: 90%;
-    user-select: none;
-    cursor: grab;
-    transition: all 0.3s ease;
-    background: rgba(255, 255, 255, -0.6);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: rgb(221 242 227);
+    left: -32px;
+    bottom: 163px;
+    display: flex;
+    flex-direction: column;
+    background: #c5d4c9;
+    padding: 15px;
+    align-items: center;
+    margin-top: 60px;
+    z-index: 10;
+    width: 400px;
+    border-radius: 7px;
 }
 
-.hero-card:hover {
-    color: white;
-}
+.main-name h1 {
+    align-self: flex-start;
+    color: black; /* графит */
+    font-weight: 600;
+    font-size: 2rem;
+    /* Тонкая белая обводка */
+    -webkit-text-stroke: 0.5px white;
+    text-stroke: 0.5px white; /* не поддерживается в Firefox */
 
-@media (max-width: 767px) {
-    .hero-card {
-        position: relative;
-        left: auto;
-        top: auto;
-        transform: none;
-        cursor: default;
-    }
+    /* Эффект вдавливания — inner shadow */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3),
+            -1px -1px 2px rgba(0, 0, 0, 0.4),
+            inset 0 1px 2px rgba(255, 255, 255, 0.2); /* визуально похоже */
+    /* Дополнительно: плавность при наведении */
+    transition: text-shadow 0.3s ease;
 }
 
 .btn {
+    margin-left: 191px;
+    color: black; /* графит */
+    font-weight: 500;
+    font-size: 1rem;
+    /* Тонкая белая обводка */
+    -webkit-text-stroke: 0.5px white;
+    text-stroke: 0.5px white; /* не поддерживается в Firefox */
+
+    /* Эффект вдавливания — inner shadow */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3),
+    -1px -1px 2px rgba(0, 0, 0, 0.4),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2); /* визуально похоже */
+    /* Дополнительно: плавность при наведении */
+    transition: text-shadow 0.3s ease;
+    padding: 15px;
     border-color: rgb(221 242 227);
+    background: rgb(221 242 227);
+    border-radius: 7px;
 }
 
 .btn:hover {
-    background: rgb(221 242 227);
+    background: rgb(135, 152, 138);
+    /*background: transparent;*/
+    color: white;
+    -webkit-text-stroke: 0.6px black; /* чёрная обводка */
+    text-stroke: 0.6px black;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4); /* лёгкая подсветка */
 }
 
 .glass-card {
