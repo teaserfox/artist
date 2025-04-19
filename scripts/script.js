@@ -46,34 +46,34 @@ let isDragging = false;
 let offsetX = 0;
 let offsetY = 0;
 
-card.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    offsetX = e.clientX - card.offsetLeft;
-    offsetY = e.clientY - card.offsetTop;
-    card.style.transition = 'none';
-});
+function isMobile() {
+    return window.innerWidth <= 767;
+}
 
-document.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
+if (!isMobile()) {
+    card.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        offsetX = e.clientX - card.offsetLeft;
+        offsetY = e.clientY - card.offsetTop;
+        card.style.transition = 'none';
+        card.style.cursor = 'grabbing';
+    });
 
-    const x = e.clientX - offsetX;
-    const y = e.clientY - offsetY;
+    document.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
 
-    // Ограничения по краям блока
-    const maxX = container.clientWidth - card.offsetWidth;
-    const maxY = container.clientHeight - card.offsetHeight;
+        const x = e.clientX - offsetX;
+        const y = e.clientY - offsetY;
 
-    card.style.left = Math.min(Math.max(0, x), maxX) + 'px';
-    card.style.top = Math.min(Math.max(0, y), maxY) + 'px';
-});
+        // Вариант без жёстких ограничений (можно добавить мягкие границы при необходимости)
+        card.style.left = x + 'px';
+        card.style.top = y + 'px';
+    });
 
-document.addEventListener('mouseup', () => {
-    isDragging = false;
-    card.style.transition = 'all 0.3s ease';
-});
-
-
-
-
-
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        card.style.transition = 'all 0.3s ease';
+        card.style.cursor = 'grab';
+    });
+}
 

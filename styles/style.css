@@ -31,7 +31,7 @@ h1, h2, h3 {
 }
 
 h1 {
-    color: #5f6962;;
+    color: rgb(221 242 227);
 }
 
 .image {
@@ -43,12 +43,6 @@ h1 {
     background: url('../images/main.jpg');
 }
 
-#hero-card {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    user-select: none;
-}
 
 .hero {
     position: relative;
@@ -56,19 +50,42 @@ h1 {
 }
 
 .hero-card {
+    position: absolute;
+    left: 933px;
+    top: 66px;
     width: fit-content;
     max-width: 90%;
     user-select: none;
-}
-
-
-.glass-card {
+    cursor: grab;
+    transition: all 0.3s ease;
     background: rgba(255, 255, 255, -0.6);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease-in-out;
+    color: rgb(221 242 227);
+}
+
+.hero-card:hover {
+    color: white;
+}
+
+@media (max-width: 767px) {
+    .hero-card {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        cursor: default;
+    }
+}
+
+.btn {
+    border-color: rgb(221 242 227);
+}
+
+.btn:hover {
+    background: rgb(221 242 227);
 }
 
 .glass-card {
