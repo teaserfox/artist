@@ -35,7 +35,45 @@ function changeSlide() {
     document.querySelector('.carousel-inner').style.transform = `translateX(-${100 * currentIndex}%)`;
 }
 
-// Переключаем слайды каждые 3 секунды
+
 setInterval(changeSlide, 3000);
+
+
+const card = document.querySelector('.hero-card');
+const container = document.querySelector('.hero');
+
+let isDragging = false;
+let offsetX = 0;
+let offsetY = 0;
+
+card.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    offsetX = e.clientX - card.offsetLeft;
+    offsetY = e.clientY - card.offsetTop;
+    card.style.transition = 'none';
+});
+
+document.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+
+    const x = e.clientX - offsetX;
+    const y = e.clientY - offsetY;
+
+    // Ограничения по краям блока
+    const maxX = container.clientWidth - card.offsetWidth;
+    const maxY = container.clientHeight - card.offsetHeight;
+
+    card.style.left = Math.min(Math.max(0, x), maxX) + 'px';
+    card.style.top = Math.min(Math.max(0, y), maxY) + 'px';
+});
+
+document.addEventListener('mouseup', () => {
+    isDragging = false;
+    card.style.transition = 'all 0.3s ease';
+});
+
+
+
+
 
 

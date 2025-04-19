@@ -43,6 +43,25 @@ h1 {
     background: url('../images/main.jpg');
 }
 
+#hero-card {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-card {
+    width: fit-content;
+    max-width: 90%;
+    user-select: none;
+}
+
+
 .glass-card {
     background: rgba(255, 255, 255, -0.6);
     backdrop-filter: blur(12px);
