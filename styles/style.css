@@ -18,6 +18,7 @@
 }
 
 body {
+    background: #c5d4c9;
     color: black;
     /*background-color: white;*/
     /*background: -webkit-linear-gradient(271deg, #ce9586,#e6cac3,#f7edeb);*/
@@ -29,6 +30,10 @@ h1, h2, h3 {
     font-family: 'Playfair Display', serif;
 }
 
+h1 {
+    color: #5f6962;;
+}
+
 .image {
     align-self: flex-end;
     width: 300px;
@@ -36,6 +41,52 @@ h1, h2, h3 {
 
 .hero {
     background: url('../images/main.jpg');
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, -0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.glass-card {
+    /*background: rgba(255, 255, 255, 0.4);*/
+    /*backdrop-filter: blur(12px);*/
+    /*-webkit-backdrop-filter: blur(12px);*/
+    /*border: 1px solid rgba(255, 255, 255, 0.3);*/
+    /*box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);*/
+    /*transition: all 0.4s ease-in-out;*/
+}
+
+/*.glass-card {*/
+/*    background: #f9f5f0; !* или любой другой цвет из предложенных *!*/
+/*    border-radius: 16px;*/
+/*    padding: 2rem;*/
+/*    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);*/
+/*    transition: 0.3s ease;*/
+/*}*/
+/*.glass-card:hover {*/
+/*    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);*/
+/*    transform: translateY(-4px);*/
+/*}*/
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.glass-card {
+    animation: fadeInUp 1.2s ease forwards;
 }
 
 nav {
