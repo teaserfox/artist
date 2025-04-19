@@ -29,8 +29,13 @@ h1, h2, h3 {
     font-family: 'Playfair Display', serif;
 }
 
+.image {
+    align-self: flex-end;
+    width: 300px;
+}
+
 .hero {
-    background-image: url('https://i.pinimg.com/736x/d8/06/50/d806500fe6ce2fe4444bd04b0ee75d4f.jpg');
+    background: url('../images/creature_4.jpg');
 }
 
 nav {
@@ -99,6 +104,36 @@ h1 {
 
 .carousel-item:first-child {
     opacity: 1; /* Делаем первый слайд видимым */
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-140px) scale(1.02) rotate(-1deg);
+    }
+    50% {
+        transform: translateY(-380px) scale(1.03) rotate(1deg);
+    }
+    75% {
+        transform: translateY(-340px) scale(1.02) rotate(-1deg);
+    }
+    100% {
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+}
+
+#order .image {
+    display: flex;
+    justify-content: center;
+    animation: floatUp 8s ease-in-out infinite;
+    transition: transform 0.3s ease-in-out;
 }
 
 
