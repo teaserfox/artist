@@ -13,20 +13,17 @@
 }
 
 @font-face {
-    font-family: system-ui, sans-serif;
-    font-style: normal;
+    src: url("../fonts/pacifico-regular.ttf");
+    font-family: pacifico-regular, sans-serif;
+}
+
+@font-face {
+    src: url("../fonts/comfortaa-regular.ttf");
+    font-family: comfortaa-regular, sans-serif;
 }
 
 body {
     background: #c5d4c9;
-}
-
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-}
-
-h1 {
-    color: rgb(221 242 227);
 }
 
 .hero {
@@ -50,8 +47,7 @@ h1 {
 }
 
 .collage-left img {
-
-
+    width: 100%;
 }
 
 .collage-right {
@@ -77,27 +73,26 @@ h1 {
 
 .main-name {
     position: absolute;
-    left: -32px;
-    bottom: 163px;
+    left: -69px;
+    bottom: 64px;
     display: flex;
     flex-direction: column;
-    background: #c5d4c9;
-    padding: 15px;
+    background: rgba(197, 212, 201);
+    padding: 24px;
     align-items: center;
     margin-top: 60px;
     z-index: 10;
-    width: 400px;
+    width: 470px;
     border-radius: 7px;
 }
 
 .main-name h1 {
     align-self: flex-start;
-    color: black; /* графит */
+    color: black;
     font-weight: 600;
-    font-size: 2rem;
     /* Тонкая белая обводка */
-    -webkit-text-stroke: 0.5px white;
-    text-stroke: 0.5px white; /* не поддерживается в Firefox */
+    /*-webkit-text-stroke: 0.5px white;*/
+    /*text-stroke: 0.5px white; !* не поддерживается в Firefox *!*/
 
     /* Эффект вдавливания — inner shadow */
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3),
@@ -105,10 +100,12 @@ h1 {
             inset 0 1px 2px rgba(255, 255, 255, 0.2); /* визуально похоже */
     /* Дополнительно: плавность при наведении */
     transition: text-shadow 0.3s ease;
+
 }
 
 .btn {
-    margin-left: 191px;
+    margin-top: 24px;
+    margin-left: 224px;
     color: black; /* графит */
     font-weight: 500;
     font-size: 1rem;
@@ -122,9 +119,8 @@ h1 {
     inset 0 1px 2px rgba(255, 255, 255, 0.2); /* визуально похоже */
     /* Дополнительно: плавность при наведении */
     transition: text-shadow 0.3s ease;
-    padding: 15px;
-    border-color: rgb(221 242 227);
-    background: rgb(221 242 227);
+    padding: 24px;
+    background: rgba(221, 242, 227);
     border-radius: 7px;
 }
 
@@ -137,14 +133,83 @@ h1 {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.4); /* лёгкая подсветка */
 }
 
-.glass-card {
-    /*background: rgba(255, 255, 255, 0.4);*/
-    /*backdrop-filter: blur(12px);*/
-    /*-webkit-backdrop-filter: blur(12px);*/
-    /*border: 1px solid rgba(255, 255, 255, 0.3);*/
-    /*box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);*/
-    /*transition: all 0.4s ease-in-out;*/
+
+.main-name h1 {
+    /*font-family: 'Rubik Moonrocks', cursive;*/
+    font-size: 2.5rem;
+    color: #2e2e2e;
+    text-shadow: 1px 1px 0 #fff;
+    filter: drop-shadow(0 1px 1px #ccc);
+    font-family: comfortaa-regular, sans-serif;
 }
+
+/*.main-name {*/
+/*    backdrop-filter: blur(8px);*/
+/*    background-color: rgba(235, 244, 235, 0.9);*/
+/*    border-radius: 12px;*/
+/*    padding: 20px;*/
+/*    max-width: 400px;*/
+/*    margin: auto;*/
+/*    text-align: center;*/
+/*    position: relative;*/
+/*    z-index: 5;*/
+/*}*/
+
+/*.btn {*/
+/*    background-color: rgba(240, 255, 240, 0.9);*/
+/*    border: 2px solid black;*/
+/*    color: black;*/
+/*    padding: 8px 16px;*/
+/*    border-radius: 8px;*/
+/*    transition: all 0.3s ease;*/
+/*}*/
+
+/*.btn:hover {*/
+/*    background-color: black;*/
+/*    color: white;*/
+/*    border-color: white;*/
+/*}*/
+
+.lamp-container {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 10;
+    pointer-events: none;
+    width: 40px;
+    left: 20%;
+}
+
+.lamp-img {
+    width: 80px;
+}
+
+.light-glow {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 200, 0.4) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.light-glow.active {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.1);
+}
+
+/*.glass-card {*/
+/*    !*background: rgba(255, 255, 255, 0.4);*!*/
+/*    !*backdrop-filter: blur(12px);*!*/
+/*    !*-webkit-backdrop-filter: blur(12px);*!*/
+/*    !*border: 1px solid rgba(255, 255, 255, 0.3);*!*/
+/*    !*box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);*!*/
+/*    !*transition: all 0.4s ease-in-out;*!*/
+/*}*/
 
 /*.glass-card {*/
 /*    background: #f9f5f0; !* или любой другой цвет из предложенных *!*/
@@ -273,9 +338,7 @@ h1 {
 }
 
 
-
-
-/* Chrome 10-25, Safari 5.1-6 */                          /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
 

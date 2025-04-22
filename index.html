@@ -9,9 +9,9 @@
 </head>
 
 <body class="text-gray-800 scroll-smooth">
+
 <!-- Hero -->
 <section class="hero">
-
     <div class="collage-left"></div>
     <div class="hero-card">
         <div class="image-polina">
@@ -22,10 +22,31 @@
             <h1>художник</h1>
             <a href="#gallery" class="btn">Смотреть галерею</a>
         </div>
-
     </div>
     <div class="collage-right"></div>
+    <div class="lamp-container">
+        <img class="lamp-img" src="" alt="">
+        <div class="light-glow"></div>
+    </div>
 </section>
+
+<!--<section class="min-h-screen flex flex-col justify-center items-center p-4">-->
+<!--    <img src="images/collage_left.jpg" alt="Фон" class="absolute inset-0 w-full h-full object-cover -z-10"/>-->
+
+<!--    <div class="main-name">-->
+<!--        <div class="image-polina">-->
+<!--            <img src="images/polina.jpg" alt="">-->
+<!--        </div>-->
+<!--        <h1>Полина Алексеева</h1>-->
+<!--        <h1>художник</h1>-->
+<!--        <a href="#gallery" class="btn mt-4 inline-block">Смотреть галерею</a>-->
+<!--    </div>-->
+<!--    <img src="images/collage_right.jpg" alt="Фон" class="absolute inset-0 w-full h-full object-cover -z-10"/>-->
+
+<!--    <div class="lamp-container">-->
+<!--        <div class="light-glow"></div>-->
+<!--    </div>-->
+<!--</section>-->
 
 
 <!-- О художнице -->
@@ -34,7 +55,7 @@
         <img data-aos="flip-left"
              data-aos-easing="ease-out-cubic"
              data-aos-duration="2000"
-             src="https://avatars.mds.yandex.net/get-mpic/4742551/2a000001937fa097364f5f8ee8fb5657eedf/optimize"
+             src="/images/polina.jpg"
              alt="Художница" class="w-full md:w-1/2 rounded-xl shadow-lg"/>
         <div>
             <h2 data-aos="fade-up" data-aos-delay="600" class="text-4xl font-bold mb-4">Обо мне</h2>
@@ -65,54 +86,279 @@
         <!-- Пример карточки -->
         <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
 
-            <img src="https://cs2.livemaster.ru/storage/55/5e/31d37a66dfb59cc47d972b8ea3dm--kartiny-i-panno-natyurmorty-s-fruktami-i-vinom.jpg"
-                 alt="Картина"
+            <img src="images/still-life/autumn-silver-light.jpg"
+                 alt="Осенний серебристый свет"
                  class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
             <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
-                <h3 class="font-semibold">"Утро"</h3>
-                <p class="text-sm">30x40 см, масло</p>
+                <h3 class="font-semibold">"Осенний серебристый свет"</h3>
+                <p class="text-sm">30x40 см, Холст/масло</p>
             </div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" id="gallery-items">
-            <div class="gallery-item creature">
-                <img src="images/creature_1.jpg" alt="" class="rounded-xl shadow"/>
-                <img src="images/creature_2.jpg" alt="" class="rounded-xl shadow"/>
-                <img src="images/creature_3.jpg" alt="" class="rounded-xl shadow"/>
-                <img src="images/creature_4.jpg" alt="" class="rounded-xl shadow"/>
-            </div>
-            <div class="gallery-item portrait">
-                <img src="https://comeon-art.com/wp-content/uploads/2020/10/%D0%BF%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82-%D0%BC%D0%B0%D1%81%D0%BB%D0%BE%D0%BC-%D0%9C%D1%83%D1%81%D0%BE%D1%80%D0%B3%D1%81%D0%BA%D0%B8%D0%B9.%D0%A0%D0%B5%D0%BF%D0%B8%D0%BD-1080x675.jpg"
-                     alt="" class="rounded-xl shadow"/>
-            </div>
-            <div class="gallery-item landscape">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTetBftHHbIxP3VX9ZBQgoooOFwqpY6yCpLA2H3dNjME9TkmFhp-OXFtJGDSlsKH3PHi7Q&usqp=CAU"
-                     alt="" class="rounded-xl shadow"/>
-                <img src="https://art16.ru/gallery2/d/141746-2/DSC06677.jpg" alt="" class="rounded-xl shadow">
-                <img src="https://img.freepik.com/premium-photo/belgrade-serbia-beautiful-oil-paint-landscape_888846-5709.jpg"
-                     alt="" class="rounded-xl shadow">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJicmBIX9O6vho5aGWXuV0AhqF3qQObzBdby-GsuTRih-ByUh_ip6A5jd6VPMdBfQ1z34&usqp=CAU"
-                     alt="" class="rounded-xl shadow">
-                <img src="https://art16.ru/gallery2/d/141746-2/DSC06677.jpg" alt="" class="rounded-xl shadow">
-            </div>
-            <!-- Добавь больше блоков -->
-        </div>
-        <!-- Дальше идут другие работы -->
-    </div>
-    <div class="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item fade-in" style="display: block;">
-                <img src="images/creature_1.jpg" alt="Artwork 1" class="carousel-image">
-            </div>
-            <div class="carousel-item fade-in">
-                <img src="images/creature_2.jpg" alt="Artwork 2" class="carousel-image">
-            </div>
-            <div class="carousel-item fade-in">
-                <img src="images/creature_3.jpg" alt="Artwork 3" class="carousel-image">
-            </div>
-            <div class="carousel-item fade-in">
-                <img src="images/creature_4.jpg" alt="Artwork 3" class="carousel-image">
+        <!--      2-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/still-life/stained-glass.jpg"
+                 alt="Осенний серебристый свет"
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
+            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="font-semibold">"Цветное стекло"</h3>
+                <p class="text-sm">30x40 см, Холст/масло</p>
             </div>
         </div>
+        <!--      3-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/still-life/silvern-cup.jpg"
+                 alt="Натюрморт с серебряным кубком"
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
+            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="font-semibold">"Натюрморт с серебряным кубком"</h3>
+                <p class="text-sm">50х60 см, Холст на картоне/масло</p>
+            </div>
+        </div>
+        <!--      4-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/still-life/song.jpg"
+                 alt="Песня"
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
+            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="font-semibold">"Песня"</h3>
+                <p class="text-sm">50х50 см, Холст на картоне/масло</p>
+            </div>
+        </div>
+        <!--      5-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/still-life/mesh-with-nuts.jpg"
+                 alt="Мешочек с орехами"
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
+            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="font-semibold">"Мешочек с орехами"</h3>
+                <p class="text-sm">50х50 см, Холст/масло</p>
+            </div>
+        </div>
+        <!--      6-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/still-life/acquaintance-with-the-artist.jpg"
+                 alt="Знакомство с художником"
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
+            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="font-semibold">"Знакомство с художником"</h3>
+                <p class="text-sm">40х50 см, Холст на картоне/масло</p>
+            </div>
+        </div>
+        <!--      7-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/still-life/grape-bun.jpg"
+                 alt="Виноградная гроздь"
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
+            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="font-semibold">"Виноградная гроздь"</h3>
+                <p class="text-sm">50х30 см, Холст на картоне/масло</p>
+            </div>
+        </div>
+        <!--      8-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/graphics/square-in-prague.jpg"
+                 alt="Площадь в Праге"
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
+            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="font-semibold">"Площадь в Праге"</h3>
+                <p class="text-sm">31х36 см, Картон/линер</p>
+            </div>
+        </div>
+        <!--      9-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/graphics/house-in-the-village-of-gorgal(3).jpg"
+                 alt="Дом в деревне Горгала-3"
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
+            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="font-semibold">"Дом в деревне Горгала"</h3>
+                <p class="text-sm">50х65 см, Пастельная бумага/уголь, белый карандаш</p>
+            </div>
+        </div>
+        <!--      10-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/graphics/house-in-the-village-of-gorgal(2).jpg"
+                 alt="Дом в деревне Горгала-2"
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
+            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="font-semibold">"Дом в деревне Горгала"</h3>
+                <p class="text-sm">60х80 см, Акварельная бумага/соус, карандаш, акварель</p>
+            </div>
+        </div>
+        <!--      11-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/graphics/house-in-the-village-of-gorgal(1).jpg"
+                 alt="Дом в деревне Горгала-1"
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
+            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="font-semibold">"Дом в деревне Горгала"</h3>
+                <p class="text-sm">64х58 см, Акварельная бумага/соус, карандаш, акварель</p>
+            </div>
+        </div>
+        <!--      12-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/graphics/two-poplars-on-the-griboedov-channel.jpg"
+                 alt="Два тополя на канале Грибоедова"
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
+            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="font-semibold">"Два тополя на канале Грибоедова"</h3>
+                <p class="text-sm">25х25 см, Бумага/соус, карандаш</p>
+            </div>
+        </div>
+        <!--      13-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/graphics/clouds-in-front-of-a-thunderstorm.jpg"
+                 alt="Облака перед грозой"
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
+            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="font-semibold">"Облака перед грозой"</h3>
+                <p class="text-sm">22х20 см, Бумага/соус, карандаш</p>
+            </div>
+        </div>
+        <!--      14-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/graphics/on-the-veranda.jpg"
+                 alt="На веранде"
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
+            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="font-semibold">"На веранде"</h3>
+                <p class="text-sm">41х29 см, Бумага/соус, акварель, карандаш</p>
+            </div>
+        </div>
+        <!--      15-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/graphics/first-of-september.jpg"
+                 alt="Первое сентября"
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
+            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="font-semibold">"Первое сентября"</h3>
+                <p class="text-sm">41х29 см, Бумага/смешанная техника</p>
+            </div>
+        </div>
+        <!--      16-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/graphics/hydrangea.jpg"
+                 alt="Гортензия"
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
+            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="font-semibold">"Гортензия"</h3>
+                <p class="text-sm">33х30 см, Бумага/соус, акварель</p>
+            </div>
+        </div>
+        <!--      17-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/graphics/tulips.jpg"
+                 alt="Тюльпаны"
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
+            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="font-semibold">"Тюльпаны"</h3>
+                <p class="text-sm">40х50 см, Бумага/смешанная техника</p>
+            </div>
+        </div>
+        <!--      18-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/graphics/still-life-with-quince.jpg"
+                 alt="Натюрморт с айвой"
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
+            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="font-semibold">"Натюрморт с айвой"</h3>
+                <p class="text-sm">50х40 см, Пастельная бумага/цветные и пастельные карандаши</p>
+            </div>
+        </div>
+        <!--      19-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/graphics/apple-quince.jpg"
+                 alt="Айва"
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
+            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="font-semibold">"Айва"</h3>
+                <p class="text-sm">20х21 см, Пастельная бумага/пастельные и цветные карандаши</p>
+            </div>
+        </div>
+        <!--      20-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/graphics/sea-buckthorn-in-a-glass.jpg"
+                 alt="Облепиха в стакане"
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
+            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="font-semibold">"Облепиха в стакане"</h3>
+                <p class="text-sm">50х35 см, Картон/смешанная техника</p>
+            </div>
+        </div>
+        <!--      21-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/graphics/tea-or-coffee.jpg"
+                 alt="Чай или кофе?"
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
+            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="font-semibold">"Чай или кофе?"</h3>
+                <p class="text-sm">25х30 см, Крафтовая бумага/цветные карандаши</p>
+            </div>
+        </div>
+        <!--      22-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/graphics/still-life-with-pumpkin-and-paper-bag.jpg"
+                 alt="Натюрморт с тыквами и бумажным пакетом"
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
+            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="font-semibold">"Натюрморт с тыквами и бумажным пакетом"</h3>
+                <p class="text-sm">50х60 см, Пастельная бумага/пастельные и цветные карандаши</p>
+            </div>
+        </div>
+        <!--      23-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/graphics/sump.jpg"
+                 alt="Колодец"
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
+            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="font-semibold">"Колодец"</h3>
+                <p class="text-sm">50х70 см, Бумага/карандаш</p>
+            </div>
+        </div>
+        <!--      24-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/graphics/demidov-bridge.jpg"
+                 alt="Демидов мост"
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
+            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="font-semibold">"Демидов мост"</h3>
+                <p class="text-sm">29х31 см, Плотная бумага/карандаш, темпера</p>
+            </div>
+        </div>
+        <!--      25-->
+        <div class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="images/graphics/house-stream-forest.jpg"
+                 alt="Дом, ручей, лес"
+                 class="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"/>
+            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 p-4 text-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+                <h3 class="font-semibold">"Дом, ручей, лес"</h3>
+                <p class="text-sm">14х19 см (каждая), Бумага/карандаш</p>
+            </div>
+        </div>
+
+<!--        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" id="gallery-items">-->
+<!--            <div class="gallery-item creature">-->
+<!--                <img src="images/creature_1.jpg" alt="" class="rounded-xl shadow"/>-->
+<!--                <img src="images/creature_2.jpg" alt="" class="rounded-xl shadow"/>-->
+<!--                <img src="images/creature_3.jpg" alt="" class="rounded-xl shadow"/>-->
+<!--                <img src="images/creature_4.jpg" alt="" class="rounded-xl shadow"/>-->
+<!--            </div>-->
+<!--            <div class="gallery-item portrait">-->
+<!--                <img src="https://comeon-art.com/wp-content/uploads/2020/10/%D0%BF%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82-%D0%BC%D0%B0%D1%81%D0%BB%D0%BE%D0%BC-%D0%9C%D1%83%D1%81%D0%BE%D1%80%D0%B3%D1%81%D0%BA%D0%B8%D0%B9.%D0%A0%D0%B5%D0%BF%D0%B8%D0%BD-1080x675.jpg"-->
+<!--                     alt="" class="rounded-xl shadow"/>-->
+<!--            </div>-->
+<!--            <div class="gallery-item landscape">-->
+<!--                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTetBftHHbIxP3VX9ZBQgoooOFwqpY6yCpLA2H3dNjME9TkmFhp-OXFtJGDSlsKH3PHi7Q&usqp=CAU"-->
+<!--                     alt="" class="rounded-xl shadow"/>-->
+<!--                <img src="https://art16.ru/gallery2/d/141746-2/DSC06677.jpg" alt="" class="rounded-xl shadow">-->
+<!--                <img src="https://img.freepik.com/premium-photo/belgrade-serbia-beautiful-oil-paint-landscape_888846-5709.jpg"-->
+<!--                     alt="" class="rounded-xl shadow">-->
+<!--                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJicmBIX9O6vho5aGWXuV0AhqF3qQObzBdby-GsuTRih-ByUh_ip6A5jd6VPMdBfQ1z34&usqp=CAU"-->
+<!--                     alt="" class="rounded-xl shadow">-->
+<!--                <img src="https://art16.ru/gallery2/d/141746-2/DSC06677.jpg" alt="" class="rounded-xl shadow">-->
+<!--            </div>-->
+<!--            &lt;!&ndash; Добавь больше блоков &ndash;&gt;-->
+<!--        </div>-->
+<!--        &lt;!&ndash; Дальше идут другие работы &ndash;&gt;-->
     </div>
 </section>
 
@@ -132,9 +378,6 @@
             Отправить
         </button>
     </form>
-    <div class="image">
-        <img src="images/1-1.png" alt="">
-    </div>
 </section>
 
 <!-- Контакты -->

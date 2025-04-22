@@ -38,6 +38,17 @@ function changeSlide() {
 
 setInterval(changeSlide, 3000);
 
+const mainName = document.querySelector('.main-name');
+const glow = document.querySelector('.light-glow');
+
+mainName.addEventListener('mouseenter', () => {
+    glow.classList.add('active');
+});
+
+mainName.addEventListener('mouseleave', () => {
+    glow.classList.remove('active');
+});
+
 
 // const card = document.querySelector('.hero-card');
 // const container = document.querySelector('.hero');
