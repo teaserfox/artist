@@ -2,6 +2,15 @@ console.log('Hello!');
 
 AOS.init();
 
+const images = document.querySelectorAll('.animated-image');
+let current = 0;
+
+setInterval(() => {
+    images[current].classList.remove('visible');
+    current = (current + 1) % images.length;
+    images[current].classList.add('visible');
+}, 13000); // каждые 8 секунд
+
 const buttons = document.querySelectorAll(".filter-btn");
 const items = document.querySelectorAll(".gallery-item");
 
@@ -48,6 +57,7 @@ mainName.addEventListener('mouseenter', () => {
 mainName.addEventListener('mouseleave', () => {
     glow.classList.remove('active');
 });
+
 
 
 // const card = document.querySelector('.hero-card');

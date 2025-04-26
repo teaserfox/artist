@@ -23,7 +23,7 @@
 }
 
 body {
-    background: #c5d4c9;
+
 }
 
 .hero {
@@ -32,33 +32,201 @@ body {
     flex-direction: row;
 }
 
+.moving-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+.image-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.animated-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    transform: translate(-55%, -55%);
+    /*transform: translate(-50%, -50%) scale(1.1); !* увеличим *!*/
+    height: auto;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    animation: floatImage 40s ease-in-out infinite;
+    z-index: 2;
+}
+
+.animated-image.visible {
+    opacity: 1;
+    z-index: 2;
+}
+
+@keyframes floatImage {
+    0%   { transform: translate(-50%, -50%) scale(1.1); }
+    25%  { transform: translate(-55%, -45%) scale(1.1); }
+    50%  { transform: translate(-45%, -40%) scale(1.1); }
+    75%  { transform: translate(-55%, -45%) scale(1.1); }
+    100% { transform: translate(-50%, -50%) scale(1.1); }
+}
+
+@keyframes moveImage {
+    0%   { transform: translate(-55%, -55%); }
+    25%  { transform: translate(-50%, -45%); }
+    50%  { transform: translate(-45%, -50%); }
+    75%  { transform: translate(-50%, -55%); }
+    100% { transform: translate(-55%, -55%); }
+}
+
+.glass-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 3;
+}
+
+
+
 .hero-card {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 100%;
+    height: 100vh;
     background: black;
     position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
-.collage-left {
-    background: url("../images/collage_left.jpg") no-repeat center / cover;
-    width: 50%;
-    height: 750px;
+.hero-card p {
+    color: white;
 }
 
-.collage-left img {
+.artist {
+    z-index: 3;
+    border: 2px solid white;
+    width: 90%;
+    height: 60px;
+    position: absolute;
+    bottom: 200px;
+}
+
+.artist p {
+    text-align: center;
+    color: white;
+    font-family: 'Great Vibes', cursive;
+    font-size: 80px;
+    line-height: 60px;
+    letter-spacing: 22px;
+    cursor: pointer;
+    text-shadow: 1px 1px 0 #000, 2px 2px 5px rgba(246, 246, 246, 0.5);
+}
+
+.card-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+    border: 2px solid white;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* основная тень */
+    background-color: rgba(255, 255, 255, 0.05); /* полупрозрачный фон */
+}
+
+
+.card-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.img-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3; /* гарантирует стабильную высоту, заменяет height */
+    overflow: hidden;
+}
+
+.img-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.8s ease;
+}
+
+.img-hover {
+    opacity: 0;
+    z-index: 1;
+}
+
+.card-button:hover .img-hover {
+    opacity: 1;
+}
+
+.card-button:hover .img-default {
+    opacity: 0;
+}
+
+.card-button p {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+
+.artist p:hover {
+
+}
+
+.hero-card-button {
+    z-index: 1;
+    position: absolute;
+    bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 60px;
+}
+
+.card-button {
+    display: flex;
+    width: 170px;
+    border: 2px solid white;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.card-button img {
     width: 100%;
 }
 
-.collage-right {
-    background: url("../images/collage_right.jpg") no-repeat center / cover;
-    width: 50%;
-    height: 750px;
+.card-button p {
+    position: absolute;
+    padding-right: 5px;
+    color: #d4af37; /* классический золотой */
+    text-shadow:
+            1px 1px 1px #aaa,
+            2px 2px 2px rgba(0, 0, 0, 0.76),
+            3px 3px 5px rgba(0,0,0,0.3);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    z-index: 3;
 }
 
-.collage-right img {
-    width: 100%;
-}
 
 .image-polina {
     padding: 15px;
@@ -84,104 +252,6 @@ body {
     z-index: 10;
     width: 470px;
     border-radius: 7px;
-}
-
-.main-name h1 {
-    align-self: flex-start;
-    color: black;
-    font-weight: 600;
-    /* Тонкая белая обводка */
-    /*-webkit-text-stroke: 0.5px white;*/
-    /*text-stroke: 0.5px white; !* не поддерживается в Firefox *!*/
-
-    /* Эффект вдавливания — inner shadow */
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3),
-            -1px -1px 2px rgba(0, 0, 0, 0.4),
-            inset 0 1px 2px rgba(255, 255, 255, 0.2); /* визуально похоже */
-    /* Дополнительно: плавность при наведении */
-    transition: text-shadow 0.3s ease;
-
-}
-
-.btn {
-    margin-top: 24px;
-    margin-left: 224px;
-    color: black; /* графит */
-    font-weight: 500;
-    font-size: 1rem;
-    /* Тонкая белая обводка */
-    -webkit-text-stroke: 0.5px white;
-    text-stroke: 0.5px white; /* не поддерживается в Firefox */
-
-    /* Эффект вдавливания — inner shadow */
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3),
-    -1px -1px 2px rgba(0, 0, 0, 0.4),
-    inset 0 1px 2px rgba(255, 255, 255, 0.2); /* визуально похоже */
-    /* Дополнительно: плавность при наведении */
-    transition: text-shadow 0.3s ease;
-    padding: 24px;
-    background: rgba(221, 242, 227);
-    border-radius: 7px;
-}
-
-.btn:hover {
-    background: rgb(135, 152, 138);
-    /*background: transparent;*/
-    color: white;
-    -webkit-text-stroke: 0.6px black; /* чёрная обводка */
-    text-stroke: 0.6px black;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4); /* лёгкая подсветка */
-}
-
-
-.main-name h1 {
-    /*font-family: 'Rubik Moonrocks', cursive;*/
-    font-size: 2.5rem;
-    color: #2e2e2e;
-    text-shadow: 1px 1px 0 #fff;
-    filter: drop-shadow(0 1px 1px #ccc);
-    font-family: comfortaa-regular, sans-serif;
-}
-
-/*.main-name {*/
-/*    backdrop-filter: blur(8px);*/
-/*    background-color: rgba(235, 244, 235, 0.9);*/
-/*    border-radius: 12px;*/
-/*    padding: 20px;*/
-/*    max-width: 400px;*/
-/*    margin: auto;*/
-/*    text-align: center;*/
-/*    position: relative;*/
-/*    z-index: 5;*/
-/*}*/
-
-/*.btn {*/
-/*    background-color: rgba(240, 255, 240, 0.9);*/
-/*    border: 2px solid black;*/
-/*    color: black;*/
-/*    padding: 8px 16px;*/
-/*    border-radius: 8px;*/
-/*    transition: all 0.3s ease;*/
-/*}*/
-
-/*.btn:hover {*/
-/*    background-color: black;*/
-/*    color: white;*/
-/*    border-color: white;*/
-/*}*/
-
-.lamp-container {
-    position: absolute;
-    top: 0;
-    transform: translateX(-50%);
-    z-index: 10;
-    pointer-events: none;
-    width: 40px;
-    left: 20%;
-}
-
-.lamp-img {
-    width: 80px;
 }
 
 .light-glow {
