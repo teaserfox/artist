@@ -237,7 +237,7 @@
     }
 
     .card-button p {
-        font-size: 0.95rem;
+        font-size: 16px;
     }
 }
 
@@ -264,10 +264,6 @@
         bottom: 200px;
     }
 
-    .card-button p {
-        font-size: 0.95rem;
-    }
-
     .hero-card-button {
         bottom: 2%;
     }
@@ -284,10 +280,6 @@
 
     .artist p {
         letter-spacing: 5px;
-    }
-
-    .card-button p {
-        font-size: 0.85rem;
     }
 
     .artist {
