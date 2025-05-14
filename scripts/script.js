@@ -1,6 +1,6 @@
 console.log('Hello!');
 
-AOS.init();
+// AOS.init();
 
 const images = document.querySelectorAll('.animated-image');
 let current = 0;
