@@ -218,22 +218,22 @@
         letter-spacing: 6px;
     }
 
-    @keyframes floatImage {
-        0% {
-            transform: translate(-50%, -50%) scale(3);
-        }
-        25% {
-            transform: translate(-55%, -45%) scale(3);
-        }
-        50% {
-            transform: translate(-45%, -40%) scale(3);
-        }
-        75% {
-            transform: translate(-55%, -45%) scale(3);
-        }
-        100% {
-            transform: translate(-50%, -50%) scale(3);
-        }
+    /*@keyframes floatImage {*/
+    /*    0% {*/
+    /*        transform: translate(-50%, -50%) scale(3);*/
+    /*    }*/
+    /*    25% {*/
+    /*        transform: translate(-55%, -45%) scale(3);*/
+    /*    }*/
+    /*    50% {*/
+    /*        transform: translate(-45%, -40%) scale(3);*/
+    /*    }*/
+    /*    75% {*/
+    /*        transform: translate(-55%, -45%) scale(3);*/
+    /*    }*/
+    /*    100% {*/
+    /*        transform: translate(-50%, -50%) scale(3);*/
+    /*    }*/
     }
 
     .card-button p {
