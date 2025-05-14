@@ -220,19 +220,19 @@
 
     @keyframes floatImage {
         0% {
-            transform: translate(-50%, -50%) scale(3);
+            transform: translate(-50%, -50%) scale(2.5);
         }
         25% {
-            transform: translate(-55%, -45%) scale(3);
+            transform: translate(-55%, -45%) scale(2.5);
         }
         50% {
-            transform: translate(-45%, -40%) scale(3);
+            transform: translate(-45%, -40%) scale(2.5);
         }
         75% {
-            transform: translate(-55%, -45%) scale(3);
+            transform: translate(-55%, -45%) scale(2.5);
         }
         100% {
-            transform: translate(-50%, -50%) scale(3);
+            transform: translate(-50%, -50%) scale(2.5);
         }
     }
 
