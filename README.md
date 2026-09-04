@@ -1,4 +1,4 @@
-## 🎨 About the project
+## 🎨 About the project https://teaserfox.github.io/artist/
 
 Этот проект был создан как самостоятельный дизайн и frontend-реализация сайта художницы.
 
