@@ -1,5 +1,3 @@
-// AOS.init();
-
 const images = document.querySelectorAll('.animated-image');
 let current = 0;
 
@@ -7,7 +5,7 @@ setInterval(() => {
     images[current].classList.remove('visible');
     current = (current + 1) % images.length;
     images[current].classList.add('visible');
-}, 13000); // каждые 8 секунд
+}, 13000); // каждые 13 секунд
 
 const buttons = document.querySelectorAll(".filter-btn");
 const items = document.querySelectorAll(".gallery-item");
@@ -55,44 +53,3 @@ mainName.addEventListener('mouseenter', () => {
 mainName.addEventListener('mouseleave', () => {
     glow.classList.remove('active');
 });
-
-
-
-// const card = document.querySelector('.hero-card');
-// const container = document.querySelector('.hero');
-//
-// let isDragging = false;
-// let offsetX = 0;
-// let offsetY = 0;
-//
-// function isMobile() {
-//     return window.innerWidth <= 767;
-// }
-//
-// if (!isMobile()) {
-//     card.addEventListener('mousedown', (e) => {
-//         isDragging = true;
-//         offsetX = e.clientX - card.offsetLeft;
-//         offsetY = e.clientY - card.offsetTop;
-//         card.style.transition = 'none';
-//         card.style.cursor = 'grabbing';
-//     });
-//
-//     document.addEventListener('mousemove', (e) => {
-//         if (!isDragging) return;
-//
-//         const x = e.clientX - offsetX;
-//         const y = e.clientY - offsetY;
-//
-//         // Вариант без жёстких ограничений (можно добавить мягкие границы при необходимости)
-//         card.style.left = x + 'px';
-//         card.style.top = y + 'px';
-//     });
-//
-//     document.addEventListener('mouseup', () => {
-//         isDragging = false;
-//         card.style.transition = 'all 0.3s ease';
-//         card.style.cursor = 'grab';
-//     });
-// }
-
