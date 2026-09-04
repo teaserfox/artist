@@ -1,5 +1,3 @@
-console.log('Hello!');
-
 // AOS.init();
 
 const images = document.querySelectorAll('.animated-image');
@@ -27,8 +25,8 @@ buttons.forEach(button => {
 });
 
 let currentIndex = 0;
-const itemss = document.querySelectorAll('.carousel-item');
-const totalItems = items.length;
+const carouselItems = document.querySelectorAll('.carousel-item');
+const totalItems = carouselItems.length;
 
 function changeSlide() {
     // Убираем класс opacity с текущего слайда
